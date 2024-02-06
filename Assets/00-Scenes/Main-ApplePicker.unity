@@ -183,8 +183,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 16
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -384,7 +384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4049177119972493613, guid: 741c72f90ab57a942875e8e6aed56366, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4049177119972493613, guid: 741c72f90ab57a942875e8e6aed56366, type: 3}
       propertyPath: m_LocalPosition.z
@@ -417,6 +417,18 @@ PrefabInstance:
     - target: {fileID: 4049177119972493613, guid: 741c72f90ab57a942875e8e6aed56366, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8387419485988015440, guid: 741c72f90ab57a942875e8e6aed56366, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8387419485988015440, guid: 741c72f90ab57a942875e8e6aed56366, type: 3}
+      propertyPath: leftAndRightEdge
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8387419485988015440, guid: 741c72f90ab57a942875e8e6aed56366, type: 3}
+      propertyPath: chanceToChangeDirection
+      value: 0.02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
