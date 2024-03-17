@@ -12,10 +12,14 @@ public class levelCreation : MonoBehaviour
     public Vector2 backgroundPos;
     public int backgroundWidth = 5;
     public int backgroundHeight = 5;
+    public GameObject playerObjectPrefab;
 
     [Header("Set Dynamically")]
     public GameObject borders;
     public GameObject background;
+    public GameObject playerObject;
+
+    public CamFollow followCam;
 
     // Start is called before the first frame update
     void Start()
@@ -65,7 +69,8 @@ public class levelCreation : MonoBehaviour
         for (int i = 0; i < backgroundWidth; i++)
         {
             
-            Vector2 baPos = Vector2.zero;
+            Vector3 baPos = Vector3.zero;
+            baPos.z = 1;
             baPos.x = i*10 - 20;
                 for (int g = 0; g < backgroundHeight; g++)
                 {
@@ -76,6 +81,13 @@ public class levelCreation : MonoBehaviour
                 }
 
         }
+        Vector3 playerPos = Vector3.zero;
+        playerObject = Instantiate<GameObject>(playerObjectPrefab);
+        playerObject.transform.position = playerPos;
+
+
+        // Assign the instantiated player object to the FollowCam script
+        followCam.target = playerObject.transform;
     }
 
     // Update is called once per frame
